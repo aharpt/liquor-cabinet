@@ -1,0 +1,8 @@
+.card {
+  display: inline-flex;
+  margin: 10px;
+}
+
+.list-group {
+  margin-top: 10px;
+}
