@@ -6,3 +6,7 @@
 .list-group {
   margin-top: 20px;
 }
+
+.drinks-selected li:last-child {
+  margin-bottom: 20px;
+}

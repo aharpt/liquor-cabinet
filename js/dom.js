@@ -5,9 +5,12 @@ let drinksChosen = [];
 
 // click handler
 $(".list-group-item").click(function() {
+
   drinksChosen.push(this.innerText);
   $(this).addClass("active");
   $(this).addClass("disabled");
+
+  $(".drinks-selected").append('<li class="list-group-item disabled">' + this.innerHTML + '</li>');
 });
 
 // hover handler
