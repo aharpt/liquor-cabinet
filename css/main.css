@@ -1,7 +1,11 @@
+/* Styles for cards displaying suggested drinks */
+
 .card {
   display: inline-flex;
   margin: 10px;
 }
+
+/* Styles for showing the drinks to choose from */
 
 .list-group {
   margin-top: 20px;

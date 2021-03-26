@@ -1,14 +1,6 @@
 // drinksChosen holds all the drinks that the user selects
 let drinksChosen = [];
 
-let addActiveClass = (drinkText) => {
-  drinksChosen.map((drink) => {
-    if (drink == drinkText) {
-
-    }
-  });
-};
-
 // "$" is for JavaScript libary jQuery
 
 // click handler
