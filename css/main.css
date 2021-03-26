@@ -18,3 +18,8 @@
 .list-group-item a {
   float: right;
 }
+
+/* Clear Button Styles */
+#clearButton {
+  margin-top: 15px;
+}
