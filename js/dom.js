@@ -11,7 +11,6 @@ $(".list-group-item").click(function() {
   $(this).addClass("disabled");
 
   $(".drinks-selected").append('<li class="list-group-item">' + this.innerHTML + '<a href="#">Remove</a></li>');
-  console.log(drinksChosen);
 });
 
 // Stack Overflow for adding a handler to dynamically generated content : https://stackoverflow.com/questions/9484295/jquery-click-not-working-for-dynamically-created-items
@@ -19,7 +18,6 @@ $(".drinks-selected").on("click", "a", function() {
   $(this).parent(".list-group-item").remove();
   drinksChosen.pop(this.innerText);
   $(".list-group-item").removeClass("active disabled");
-  console.log(drinksChosen);
 });
 
 // hover handler
