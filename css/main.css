@@ -10,3 +10,7 @@
 .drinks-selected li:last-child {
   margin-bottom: 20px;
 }
+
+.list-group-item a {
+  float: right;
+}
