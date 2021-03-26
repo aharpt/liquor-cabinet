@@ -17,7 +17,18 @@ $(".list-group-item").click(function() {
 $(".drinks-selected").on("click", "a", function() {
   $(this).parent(".list-group-item").remove();
   drinksChosen.pop(this.innerText);
+
+  let $listGroupItem = $(".list-group-item");
   $(".list-group-item").removeClass("active disabled");
+
+  // for (let i = 0; i < $listGroupItem.length; i++) {
+  //   console.log($listGroupItem[i].innerText);
+  //   console.log($(this).parent(".list-group-item").text());
+  //   if ($listGroupItem[i].innerText == $(this).parent(".list-group-item").text()) {
+  //     console.log("in loop");
+  //     $(".list-group-item").removeClass("active disabled");
+  //   }
+  // }
 });
 
 // hover handler
