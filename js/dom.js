@@ -11,14 +11,19 @@ $(".list-group-item").click(function() {
   $(this).addClass("disabled");
 
   $(".drinks-selected").append('<li class="list-group-item">' + this.innerHTML + '</li>');
+
+  // Add recipe options dynamically
+  $(".recipes-column").append('<div class="card" style="width: 18rem;"><img src="./img/014_resized.jpg" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">Drink title</h5><p class="card-text">Drink Description.</p></div></div>');
 });
 
 $("#clearButton").click(function() {
 
   $(".drinks-selected").remove();
   $(".list-group-item").removeClass("active disabled");
-
   drinksChosen.pop(this.innerText);
+
+  // remove recipes
+  $(".recipes-column .card").remove();
 });
 
 // hover handler
