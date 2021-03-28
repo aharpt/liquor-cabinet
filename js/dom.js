@@ -14,6 +14,7 @@ $(".list-group-item").click(function() {
 
   // Add recipe options dynamically
   $(".recipes-column").append('<div class="card" style="width: 18rem;"><img src="./img/014_resized.jpg" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">Drink title</h5><p class="card-text">Drink Description.</p><a href="#" class="btn btn-primary card-link">See Full Recipe</a></div></div>');
+  // $(".card-body").append("<p>Paragraph</p>");
 });
 
 $("#clearButton").click(function() {
