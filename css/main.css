@@ -1,8 +1,25 @@
+/* Styles for cards displaying suggested drinks */
+
 .card {
   display: inline-flex;
   margin: 10px;
 }
 
+/* Styles for showing the drinks to choose from */
+
 .list-group {
   margin-top: 20px;
+}
+
+.drinks-selected li:last-child {
+  margin-bottom: 20px;
+}
+
+.list-group-item a {
+  float: right;
+}
+
+/* Clear Button Styles */
+#clearButton {
+  margin-top: 15px;
 }
