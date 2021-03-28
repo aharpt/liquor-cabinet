@@ -1,0 +1,25 @@
+Expected Hours:
+expected hours are calculated based on team members previous experience and how long it would take them to do a 
+project/tast of similar magnitude. This can include hours writing physical code along with the hour needed to 
+learn the project language.
+    Eva: 6hrs
+    Kaylee:
+    Nick:
+    Michael:
+    Aaron: 10hrs
+
+
+Actual Hours:
+    Eva:
+    Kaylee:
+    Nick:
+    Michael:
+    Aaron:
+
+Team Meeting Hours:
+    3/22:   40min
+        Start: 7:00pm
+        End: 7:40pm
+    3/27:   30min
+        Start: 1:00pm
+        End: 1:30pm
