@@ -29,4 +29,11 @@ function iterate(liquor, db) {
 }
 
 compMaster(temp_drinkArr, temp_masterArr);
+
+// click handler to display recipes
+$(".liquor-options").on("click", "li", function() {
+  // Add recipe options dynamically
+  $(".recipes-column").append('<div class="card" style="width: 18rem;"><img src="./img/014_resized.jpg" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">' + possibleRecipes[0] + '</h5><p class="card-text">' + possibleRecipes[0] + '.</p><a href="#" class="btn btn-primary card-link">See Full Recipe</a></div></div>');
+
+});
 console.log(possibleRecipes);
