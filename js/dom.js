@@ -4,7 +4,8 @@ let drinksChosen = [];
 // "$" is for JavaScript libary jQuery
 
 /* click handlers */
-$(".list-group-item").click(function() {
+// click handlers on dynamic content https://stackoverflow.com/questions/9484295/jquery-click-not-working-for-dynamically-created-items
+$(".liquor-options").on("click", "li", function() {
 
   drinksChosen.push(this.innerText);
   $(this).addClass("active");
@@ -27,7 +28,7 @@ $("#clearButton").click(function() {
   $(".recipes-column .card").remove();
 });
 
-// hover handler
-$(".list-group-item").hover(function() {
+// hover handler on dynamic content https://stackoverflow.com/questions/9484295/jquery-click-not-working-for-dynamically-created-items
+$(".liquor-options").on("mouseenter", "li", function() {
   $(this).css("cursor", "pointer");
 });

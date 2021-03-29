@@ -13,6 +13,8 @@ function compMaster(list, file) {
 
 function iterate(liquor, db) {
     console.log("Reading ", liquor);
+    // appends drinks for temp_drinkArr
+    $(".liquor-options").append('<li class="list-group-item">' + liquor + '</li>');
     for (var i = 0; i < db.length; i++) {
         for (var j = 0; j < db[i][1]; j++) {
             if (db[i][j+3] != liquor) {
