@@ -9,7 +9,9 @@
   <body>
     <div class="jumbotron">
       <div class="container">
-        <h2>Welcome to Your Liquor Cabinet</h2>
+        <h2>Welcome to Your Liquor Cabinet.</h2>
+        <h3 id="time">Display Current Time</h3>
+        <p1 id="recommendation">Perhaps a ...?</p1>
       </div>
     </div>
 
@@ -17,12 +19,7 @@
       <div class="row">
         <div class="col-md-5">
           <h3>Liquor Options:</h3>
-          <ul class="list-group">
-            <li class="list-group-item">An item</li>
-            <li class="list-group-item">A second item</li>
-            <li class="list-group-item">A third item</li>
-            <li class="list-group-item">A fourth item</li>
-            <li class="list-group-item">And a fifth one</li>
+          <ul class="list-group liquor-options">
           </ul>
           <button id="clearButton" type="button" class="btn btn-secondary">Clear Selection</button>
         </div>
@@ -37,15 +34,10 @@
       </div>
     </div>
 
-    <div>
-      <h3 id="time">Display Current Time</h3>
-      <p1 id="recommendation">Perhaps a ...?</p1>
-      <script src="./js/recommendDrink.js"></script>
-    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="./js/recommendDrink.js"></script>
     <script type="text/javascript" src="./js/dom.js">
-
     </script>
     <script src="./js/compare.js"></script>
   </body>
