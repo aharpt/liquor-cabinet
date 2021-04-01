@@ -1,5 +1,16 @@
-temp_drinkArr = ["Rum", "Rye Whiskey", "Bourbon Whiskey"];
-temp_masterArr = [["Old Fashioned", 1, 3, "Rye Whiskey", "Bitters", "Sugar Cube", "Orange Peel"], ["Gimlet", 1, 2, "Gin", "Lime Juice"], ["Caribbean Dog Turd", 6, 0, "Rum", "Rum", "Rum", "Rum", "Rum", "Rum"]];
+//array format is ["Name", # of alcohols, # of non-alcohols, alcoholic ingredients, ... , nonalcoholic ingredients,]
+
+temp_drinkArr = ["Brandy", "Champagne", "Cognac", "Gin", "Red Wine", "Vermouth", "Vodka"];
+masterArr = [['Bloody Mary', 1, 7, 'vodka', 'tomatoe juice', 'lemon juice', 'Tabasco sauce', 'Worcestershire sauce', 'celery salt', 'pepper', 'horseradish'],
+            ['Polynesian Pick-Me-Up', 1, 6, 'vodka', 'curry powder', 'lemon juice', 'cream', 'Tabasco sauce', 'crushed ice'],
+            ['Sangria', 2, 7, 'red wine', 'cognac', 'triple sec', 'maraschino liqueur', 'ripe peach', 'lemon slices', 'sugar', 'orange', 'club soda'],
+            ['Screwdriver', 1, 3, 'vodka', 'triple sec', 'orange juice', 'lemon juice'],
+            ['Sea Breeze', 2, 4, 'gin', 'brandy', 'grenadine', 'lemon juice', 'club soda', 'mint sprigs'],
+            ['Cape Cod', 1, 3, 'vodka', 'lime juice', 'cranberry juice', 'sugar'],
+            ['Mimosa', 1, 2, 'champagne', 'oragne juice', 'apricot nectar'],
+            ['Country Club Cooler', 1, 3, 'vermouth', 'club soda', 'ginger ale', 'grenadine'],
+            ['Madras', 1, 2, 'vodka', 'cranberry juice', 'orange juice'],
+            ['Champagne Blues', 1, 3, 'champagne', 'blue curacao', 'lemon juice', 'lemons']];
 
 
 possibleRecipes = [];
@@ -28,7 +39,7 @@ function iterate(liquor, db) {
     }
 }
 
-compMaster(temp_drinkArr, temp_masterArr);
+compMaster(temp_drinkArr, masterArr);
 
 // click handler to display recipes
 $(".liquor-options").on("click", "li", function() {
