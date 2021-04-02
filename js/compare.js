@@ -42,18 +42,32 @@ function iterate(liquor, db) {
 
 compMaster(temp_drinkArr, masterArr);
 
-// click handler to display recipes
-$(".liquor-options").on("click", "li", function() {
-  // Add recipe options dynamically
-  // Photo by <a href="https://unsplash.com/@jordannix?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jordan Nix</a> on <a href="https://unsplash.com/s/photos/martini?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-
-  $(".recipes-column").append('<div class="card" style="width: 18rem;"><img src="./img/martini.jpg" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">' + possibleRecipes[0] + '</h5><p class="card-text">' + possibleRecipes[0] + '.</p><a href="#" class="btn btn-primary card-link recipe-button">See Full Recipe</a><p id="ingredients">Ingredients</p></div></div>');
-
-});
-
 /* click handler for "Get Full Recipe" button */
 $(".recipes-column").on("click", ".recipe-button", function() {
   $(this).hide();
   $(this).siblings("#ingredients").show();
 });
+
+/* Function to search drink clicked and see what recipes should be displayed */
+$(".liquor-options").on("click", "li", function() {
+  let $liquorClicked = $(this).text();
+  let nonAlcoholIngredients = "";
+
+  for (let i = 0; i < masterArr.length; i++) {
+    if ($liquorClicked.toLowerCase() == masterArr[i][3]) {
+
+      for (let j = 4; j < masterArr[i].length; j++) {
+        nonAlcoholIngredients += masterArr[i][j];
+        nonAlcoholIngredients += "\n";
+      }
+
+      console.log("In conditional");
+      $(".recipes-column").append('<div class="card" style="width: 18rem;"><img src="./img/martini.jpg" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">' + masterArr[i][0] + '</h5><p class="card-text">' + masterArr[i][0] + '.</p><a href="#" class="btn btn-primary card-link recipe-button">See Full Recipe</a><ul id="ingredients"><span>Ingredients:</span><ol>Parts Alcohol: ' + masterArr[i][1] + '</ol><ol>Parts Non-Alcohol: ' + masterArr[i][2] + '</ol><ol>Alcohol Ingredients: ' + masterArr[i][3] + '</ol><ol>Non-Alcohol Ingredients: ' + nonAlcoholIngredients+ '</ol></ul></div></div>');
+    }
+  }
+});
+
+
+
+
 console.log(possibleRecipes);
