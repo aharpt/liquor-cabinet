@@ -4,7 +4,7 @@ project/tast of similar magnitude. This can include hours writing physical code 
 learn the project language.
     Eva: 6hrs
     Kaylee:
-    Nick:
+    Nick: 4-5 hrs
     Michael:
     Aaron: 10hrs
 
@@ -13,6 +13,10 @@ Actual Hours:
     Eva:
     Kaylee:
     Nick:
+        3/23 - 40 min.
+        3/24 - 30 min.
+        3/28 - 60 min.
+        4/1 - 60 min.
     Michael:
     Aaron:
 
