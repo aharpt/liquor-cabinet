@@ -1,7 +1,7 @@
 //array format is ["Name", # of alcohols, # of non-alcohols, alcoholic ingredients, ... , nonalcoholic ingredients,]
 
 temp_drinkArr = ["Brandy", "Champagne", "Cognac", "Gin", "Red Wine", "Vermouth", "Vodka"];
-masterArr = [['Bloody Mary', 1, 7, 'vodka', 'tomatoe juice', 'lemon juice', 'Tabasco sauce', 'Worcestershire sauce', 'celery salt', 'pepper', 'horseradish'],
+masterArr = [['Bloody Mary', 1, 7, 'vodka', 'tomatoe juice', 'lemon juice', 'Tabasco sauce', 'Worcestershire sauce', 'celery salt', 'pepper', 'horseradish', './img/Bloody-Mary.jpg'],
             ['Polynesian Pick-Me-Up', 1, 6, 'vodka', 'curry powder', 'lemon juice', 'cream', 'Tabasco sauce', 'crushed ice'],
             ['Sangria', 2, 7, 'red wine', 'cognac', 'triple sec', 'maraschino liqueur', 'ripe peach', 'lemon slices', 'sugar', 'orange', 'club soda'],
             ['Screwdriver', 1, 3, 'vodka', 'triple sec', 'orange juice', 'lemon juice'],
@@ -56,13 +56,13 @@ $(".liquor-options").on("click", "li", function() {
   for (let i = 0; i < masterArr.length; i++) {
     if ($liquorClicked.toLowerCase() == masterArr[i][3]) {
 
-      for (let j = 4; j < masterArr[i].length; j++) {
+      for (let j = 4; j < (masterArr[i].length - 1); j++) {
         nonAlcoholIngredients += masterArr[i][j];
         nonAlcoholIngredients += ", ";
       }
 
       console.log("In conditional");
-      $(".recipes-column").append('<div class="card" style="width: 18rem;"><img src="./img/martini.jpg" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">' + masterArr[i][0] + '</h5><p class="card-text">' + masterArr[i][0] + '.</p><a href="#" class="btn btn-primary card-link recipe-button">See Full Recipe</a><ul id="ingredients"><span>Ingredients:</span><ol>Parts Alcohol: ' + masterArr[i][1] + '</ol><ol>Parts Non-Alcohol: ' + masterArr[i][2] + '</ol><ol>Alcohol Ingredients: ' + masterArr[i][3] + '</ol><ol>Non-Alcohol Ingredients: ' + nonAlcoholIngredients+ '</ol></ul></div></div>');
+      $(".recipes-column").append('<div class="card" style="width: 18rem;"><img src="'+ masterArr[i][(masterArr[i].length - 1)] + '" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">' + masterArr[i][0] + '</h5><p class="card-text">' + masterArr[i][0] + '.</p><a href="#" class="btn btn-primary card-link recipe-button">See Full Recipe</a><ul id="ingredients"><span>Ingredients:</span><ol>Parts Alcohol: ' + masterArr[i][1] + '</ol><ol>Parts Non-Alcohol: ' + masterArr[i][2] + '</ol><ol>Alcohol Ingredients: ' + masterArr[i][3] + '</ol><ol>Non-Alcohol Ingredients: ' + nonAlcoholIngredients+ '</ol></ul></div></div>');
     }
   }
 });
