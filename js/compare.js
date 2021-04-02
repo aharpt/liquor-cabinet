@@ -3,11 +3,11 @@
 temp_drinkArr = ["Brandy", "Champagne", "Cognac", "Gin", "Red Wine", "Vermouth", "Vodka"];
 masterArr = [['Bloody Mary', 1, 7, 'vodka', 'tomatoe juice', 'lemon juice', 'Tabasco sauce', 'Worcestershire sauce', 'celery salt', 'pepper', 'horseradish', './img/Bloody-Mary.jpg'],
             ['Polynesian Pick-Me-Up', 1, 6, 'vodka', 'curry powder', 'lemon juice', 'cream', 'Tabasco sauce', 'crushed ice', './img/Polynesian-Pick-Me-Up.jpg'],
-            ['Sangria', 2, 7, 'red wine', 'cognac', 'triple sec', 'maraschino liqueur', 'ripe peach', 'lemon slices', 'sugar', 'orange', 'club soda', './img/Sangira.jpg'],
+            ['Sangria', 2, 7, 'red wine', 'cognac', 'triple sec', 'maraschino liquor', 'ripe peach', 'lemon slices', 'sugar', 'orange', 'club soda', './img/Sangira.jpg'],
             ['Screwdriver', 1, 3, 'vodka', 'triple sec', 'orange juice', 'lemon juice', './img/Screwdriver.jpg'],
             ['Sea Breeze', 2, 4, 'gin', 'brandy', 'grenadine', 'lemon juice', 'club soda', 'mint sprigs', './img/Sea-Breeze.jpg'],
             ['Cape Cod', 1, 3, 'vodka', 'lime juice', 'cranberry juice', 'sugar', './img/Cape-Cod.jpg'],
-            ['Mimosa', 1, 2, 'champagne', 'oragne juice', 'apricot nectar', './img/Mimosa.jpg'],
+            ['Mimosa', 1, 2, 'champagne', 'orange juice', 'apricot nectar', './img/Mimosa.jpg'],
             ['Country Club Cooler', 1, 3, 'vermouth', 'club soda', 'ginger ale', 'grenadine', './img/Country-Club-Cooler.jpg'],
             ['Madras', 1, 2, 'vodka', 'cranberry juice', 'orange juice', './img/Madras.jpg'],
             ['Champagne Blues', 1, 3, 'champagne', 'blue curacao', 'lemon juice', 'lemons', './img/Champagne-lues.jpg']];
@@ -58,11 +58,15 @@ $(".liquor-options").on("click", "li", function() {
 
       for (let j = 4; j < (masterArr[i].length - 1); j++) {
         nonAlcoholIngredients += masterArr[i][j];
-        nonAlcoholIngredients += ", ";
+        if (j !== (masterArr[i].length - 2)) {
+          nonAlcoholIngredients += ", ";
+        }
       }
 
       console.log("In conditional");
-      $(".recipes-column").append('<div class="card" style="width: 18rem;"><img src="'+ masterArr[i][(masterArr[i].length - 1)] + '" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">' + masterArr[i][0] + '</h5><p class="card-text">' + masterArr[i][0] + '.</p><a href="#" class="btn btn-primary card-link recipe-button">See Full Recipe</a><ul id="ingredients"><span>Ingredients:</span><ol>Parts Alcohol: ' + masterArr[i][1] + '</ol><ol>Parts Non-Alcohol: ' + masterArr[i][2] + '</ol><ol>Alcohol Ingredients: ' + masterArr[i][3] + '</ol><ol>Non-Alcohol Ingredients: ' + nonAlcoholIngredients+ '</ol></ul></div></div>');
+      $(".recipes-column").append('<div class="card" style="width: 18rem;"><img src="'+ masterArr[i][(masterArr[i].length - 1)] + '" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">' + masterArr[i][0] + '</h5><p class="card-text">' + masterArr[i][0] + '.</p><button class="btn btn-primary recipe-button">See Full Recipe</button><ul id="ingredients"><span>Ingredients:</span><ol>Parts Alcohol: ' + masterArr[i][1] + '</ol><ol>Parts Non-Alcohol: ' + masterArr[i][2] + '</ol><ol>Alcohol Ingredients: ' + masterArr[i][3] + '</ol><ol>Non-Alcohol Ingredients: ' + nonAlcoholIngredients+ '</ol></ul></div></div>');
+
+      nonAlcoholIngredients = "";
     }
   }
 });
