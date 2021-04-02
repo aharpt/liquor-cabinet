@@ -58,7 +58,7 @@ $(".liquor-options").on("click", "li", function() {
 
       for (let j = 4; j < masterArr[i].length; j++) {
         nonAlcoholIngredients += masterArr[i][j];
-        nonAlcoholIngredients += "\n";
+        nonAlcoholIngredients += ", ";
       }
 
       console.log("In conditional");
