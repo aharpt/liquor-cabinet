@@ -1,0 +1,27 @@
+Software Architecture
+
+The software architecture utilized for the project 3 design was 3-tier architecture. 
+3-Tier architecture has a presentation tier, logic tier, and data tier. This allows our 
+project to be seemless as a prototype with the ability to be upgraded and added to for the
+following project. Each layer can be changed without affecting the functionality of all of 
+the other tiers.
+The presentation tier is the top most tier that allows the user to understand and interact
+with the interface. For our project, this is the html display where the user can select 
+the liquor that they have or would like to use. It visually displays a list that allows 
+them to select what they want. 
+The logic tier runs the commands and functions of the program. It controls the use of the 
+data from the data tier but also controls the input from the presentation tier. In our 
+project these are the functional classes of compare.js and recommendDrinks.js. Both of 
+these classes take in the user input and selection from the front end then access the 
+stored drinks data. There are all different comparisons and suggestions that can be made 
+based on different criteria that the logic tier handles to eventually display the results 
+back to the user in the presentation tier. 
+The data tier is where information is stored and retrieved to be processed by the logic 
+tier and then displayed back to the user interface. For our project the data tier is 
+represented by the drink class. The drink class stores all of the recipes for the drinks 
+to be made. It stores the drink name, alcoholic ingredients, and non alcoholic 
+ingredients. The drink information is accessed during drink comparisons to find what 
+drinks contain the desired alcohol. It is also accessed when looking for the drink to 
+suggest to the user on the home page. 
+
+words: 313
