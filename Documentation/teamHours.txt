@@ -5,7 +5,7 @@ learn the project language.
     Eva: 6hrs
     Kaylee:
     Nick: 4-5 hrs
-    Michael:
+    Michael: 5-8 hrs
     Aaron: 10hrs
 
 
@@ -17,7 +17,11 @@ Actual Hours:
         3/24 - 30 min.
         3/28 - 60 min.
         4/1 - 60 min.
-    Michael:
+    Michael:     
+	    3/26 - 90min
+	    3/31 - 60min
+	    4/1 - 30min
+        4/2 -15min
     Aaron:
 
 Team Meeting Hours:
