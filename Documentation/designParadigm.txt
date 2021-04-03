@@ -1,0 +1,20 @@
+Team 14 chose to do a function-oriented design programming paradigm for the design of our 
+prototype for project 3. For project 3 our team decided to create a program that will 
+suggest certain drink based on the liquor you have or want to use. We decided to break 
+the design into different functioning parts. For example, we have compare.js and 
+recommendDrink.js. compare.js takes the alcohol the user chose and searches the array 
+storing the ingredients for the drinks and saves the drinks that the liquors match. The 
+function is to find matching drinks. recommendDrinks.js takes the time that the user is 
+using the liquor cabinet program and makes a suggestion of the drink the user could make.
+The focus for the project is on the comparison and display which is not dependent on the 
+drink class and attributes.
+Although the majority of our project is function-oriented design there is some 
+object-oriented design also present. The majority of our project revolves around searching 
+and displaying drinks. To make the drinks easier to work with we created a drink class. 
+This allows the creation of drink classes that can have more complex attributes like the 
+drink name, the alcohols, and the non-alcoholic ingredients. The focus is solely on the 
+drink information not how the drink data will be used or displayed. 
+JavaScript is a somewhat unique language since it offers the ability to code imperatively
+with object-oriented design and/or declaratively with function-oriented design. This
+allowed our team flexibility in how we wanted to do the design and lay out of our project 
+behind the scenes.
