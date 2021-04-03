@@ -23,3 +23,8 @@
 #clearButton {
   margin-top: 15px;
 }
+
+/* Ingredients Paragraph */
+#ingredients {
+  display: none;
+}
