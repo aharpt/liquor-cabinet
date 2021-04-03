@@ -26,6 +26,9 @@ Actual Hours:
         3/26: 70min
         3/27: 20min  meeting with Michael
         3/28: 27min
+        4/1:  18min
+        4/2:  13min
+        4/3:  35min
 
 Team Meeting Hours:
     3/22:   40min
