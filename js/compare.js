@@ -57,13 +57,6 @@ $(".liquor-options").on("click", "li", function() {
   for (let i = 0; i < masterArr.length; i++) {
     if ($liquorClicked.toLowerCase() == masterArr[i][3]) {
 
-  //     for (let j = 4; j < (masterArr[i].length - 1); j++) {
-  //       nonAlcoholIngredients += masterArr[i][j];
-  //       if (j !== (masterArr[i].length - 2)) {
-  //         nonAlcoholIngredients += ", ";
-  //       }
-  //     }
-
       // SAME CONCEPT AS ABOVE JUST NEW IMPLEMENTATION
       for (let j = 3; j < (masterArr[i].length - 1); j++) {
         for (let k = 0; k < temp_drinkArr.length; k++) {
