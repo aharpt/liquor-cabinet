@@ -69,17 +69,19 @@ $(".liquor-options").on("click", "li", function() {
         for (let k = 0; k < temp_drinkArr.length; k++) {
           if (masterArr[i][j] == temp_drinkArr[k].toLowerCase()) {
             alcoholIngredients += masterArr[i][j];
-            alcoholIngredients += ", ";
+            if (k !== (temp_drinkArr.length - 1)) {
+              alcoholIngredients += ", ";
+            }
             break;
           }
 
           if (k == (temp_drinkArr.length - 1)) {
             nonAlcoholIngredients += masterArr[i][j];
-            nonAlcoholIngredients += ", ";
+            if (j !== (masterArr.length - 2)) {
+              nonAlcoholIngredients += ", ";
+            }
           }
         }
-
-
       }
 
       console.log("In conditional");
