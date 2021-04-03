@@ -1,0 +1,2 @@
+https://refactoring.guru/design-patterns/catalog
+https://javascript.plainenglish.io/what-are-javascript-programming-paradigms-3ef0f576dfdb
