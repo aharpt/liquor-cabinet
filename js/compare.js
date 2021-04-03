@@ -68,17 +68,21 @@ $(".liquor-options").on("click", "li", function() {
       for (let j = 3; j < (masterArr[i].length - 1); j++) {
         for (let k = 0; k < temp_drinkArr.length; k++) {
           if (masterArr[i][j] == temp_drinkArr[k].toLowerCase()) {
-            alcoholIngredients += masterArr[i][j];
-            if (k !== (temp_drinkArr.length - 1)) {
+            if (alcoholIngredients == "") {
+              alcoholIngredients += masterArr[i][j];
+            } else {
               alcoholIngredients += ", ";
+              alcoholIngredients += masterArr[i][j];
             }
             break;
           }
 
           if (k == (temp_drinkArr.length - 1)) {
-            nonAlcoholIngredients += masterArr[i][j];
-            if (j !== (masterArr.length - 2)) {
+            if (nonAlcoholIngredients == "") {
+              nonAlcoholIngredients += masterArr[i][j];
+            } else {
               nonAlcoholIngredients += ", ";
+              nonAlcoholIngredients += masterArr[i][j];
             }
           }
         }
