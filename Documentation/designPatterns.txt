@@ -1,0 +1,28 @@
+Design Patterns:
+
+Behavioral Design Patterns:
+Chain of Responsibility:
+The chain of responsibility takes an input and causes a chain reaction through the program
+till the input is handled. For our particular project prototype the input is the user's 
+selection of alcohol. The user clicks the alcohol on the home page of the user interface. 
+This selection is the passed to the comparison class that uses it to search for 
+corresponding drinks. The comparison data is then pushed back to the interface to be 
+displayed back to the user. One user selection causes the data to be passed through to 
+multiple other functions and classes.
+
+Iterator:
+This design pattern is key to our comparison class and function. After the user makes 
+their alcohol selection it takes the choice and compares it to the database of known 
+drinks. In compare.js the function iterates through an array looking for drinks that have 
+the matching alcohol. Later in the next project we hope to expand on the iterator to be 
+able to search and compare the drinks for other defining features like alcohol content or 
+non-alcoholic ingredients. All of this comparison is happening but is not seen on the f
+ront-end by the user.
+
+Command:
+This design pattern takes a request and turns it into an object that can then be used as
+a parameter in various other capacities. In our project this can be seen as a alcohol 
+selected is then turned into a master array of drinks to then be passed on to be 
+displayed.
+
+Words: 255

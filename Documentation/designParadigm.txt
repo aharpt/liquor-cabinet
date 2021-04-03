@@ -18,3 +18,5 @@ JavaScript is a somewhat unique language since it offers the ability to code imp
 with object-oriented design and/or declaratively with function-oriented design. This
 allowed our team flexibility in how we wanted to do the design and lay out of our project 
 behind the scenes.
+
+words:271
