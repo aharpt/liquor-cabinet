@@ -52,21 +52,47 @@ $(".recipes-column").on("click", ".recipe-button", function() {
 $(".liquor-options").on("click", "li", function() {
   let $liquorClicked = $(this).text();
   let nonAlcoholIngredients = "";
+  let alcoholIngredients = "";
 
   for (let i = 0; i < masterArr.length; i++) {
     if ($liquorClicked.toLowerCase() == masterArr[i][3]) {
 
-      for (let j = 4; j < (masterArr[i].length - 1); j++) {
-        nonAlcoholIngredients += masterArr[i][j];
-        if (j !== (masterArr[i].length - 2)) {
-          nonAlcoholIngredients += ", ";
+  //     for (let j = 4; j < (masterArr[i].length - 1); j++) {
+  //       nonAlcoholIngredients += masterArr[i][j];
+  //       if (j !== (masterArr[i].length - 2)) {
+  //         nonAlcoholIngredients += ", ";
+  //       }
+  //     }
+
+      // SAME CONCEPT AS ABOVE JUST NEW IMPLEMENTATION
+      for (let j = 3; j < (masterArr[i].length - 1); j++) {
+        for (let k = 0; k < temp_drinkArr.length; k++) {
+          if (masterArr[i][j] == temp_drinkArr[k].toLowerCase()) {
+            if (alcoholIngredients == "") {
+              alcoholIngredients += masterArr[i][j];
+            } else {
+              alcoholIngredients += ", ";
+              alcoholIngredients += masterArr[i][j];
+            }
+            break;
+          }
+
+          if (k == (temp_drinkArr.length - 1)) {
+            if (nonAlcoholIngredients == "") {
+              nonAlcoholIngredients += masterArr[i][j];
+            } else {
+              nonAlcoholIngredients += ", ";
+              nonAlcoholIngredients += masterArr[i][j];
+            }
+          }
         }
       }
 
       console.log("In conditional");
-      $(".recipes-column").append('<div class="card" style="width: 18rem;"><img src="'+ masterArr[i][(masterArr[i].length - 1)] + '" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">' + masterArr[i][0] + '</h5><p class="card-text">' + masterArr[i][0] + '.</p><button class="btn btn-primary recipe-button">See Full Recipe</button><ul id="ingredients"><span>Ingredients:</span><ol>Parts Alcohol: ' + masterArr[i][1] + '</ol><ol>Parts Non-Alcohol: ' + masterArr[i][2] + '</ol><ol>Alcohol Ingredients: ' + masterArr[i][3] + '</ol><ol>Non-Alcohol Ingredients: ' + nonAlcoholIngredients+ '</ol></ul></div></div>');
+      $(".recipes-column").append('<div class="card" style="width: 18rem;"><img src="'+ masterArr[i][(masterArr[i].length - 1)] + '" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">' + masterArr[i][0] + '</h5><p class="card-text">' + masterArr[i][0] + '.</p><button class="btn btn-primary recipe-button">See Full Recipe</button><ul id="ingredients"><span>Ingredients:</span><ol>Parts Alcohol: ' + masterArr[i][1] + '</ol><ol>Parts Non-Alcohol: ' + masterArr[i][2] + '</ol><ol>Alcohol Ingredients: ' + alcoholIngredients + '</ol><ol>Non-Alcohol Ingredients: ' + nonAlcoholIngredients+ '</ol></ul></div></div>');
 
       nonAlcoholIngredients = "";
+      alcoholIngredients = "";
     }
   }
 });
