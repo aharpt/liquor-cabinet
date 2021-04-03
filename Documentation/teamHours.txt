@@ -11,9 +11,9 @@ learn the project language.
 
 Actual Hours:
     Eva:
-        3/27: 30min
-        3/30: 20min
-
+        3/27:   30min
+        3/30:   20min
+        4/2:    90min
     Kaylee:
     Nick:
         3/23 - 40 min.
@@ -29,8 +29,11 @@ Actual Hours:
 
 Team Meeting Hours:
     3/22:   40min
-        Start: 7:00pm
-        End: 7:40pm
+        Start:  7:00pm
+        End:    7:40pm
     3/27:   30min
-        Start: 1:00pm
-        End: 1:30pm
+        Start:  1:00pm
+        End:    1:30pm
+    3/31:
+        Start:
+        End:    
