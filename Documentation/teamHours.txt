@@ -11,6 +11,9 @@ learn the project language.
 
 Actual Hours:
     Eva:
+        3/27: 30min
+        3/30: 20min
+
     Kaylee:
     Nick:
         3/23 - 40 min.
@@ -19,6 +22,10 @@ Actual Hours:
         4/1 - 60 min.
     Michael:
     Aaron:
+        3/23: 30min
+        3/26: 70min
+        3/27: 20min  meeting with Michael
+        3/28: 27min
 
 Team Meeting Hours:
     3/22:   40min
