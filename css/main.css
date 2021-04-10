@@ -28,3 +28,15 @@
 #ingredients {
   display: none;
 }
+
+/* Upload file div */
+.upload-file {
+  display: block;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+/* Download file div */
+.download-file {
+  margin-bottom: 25px;
+}
