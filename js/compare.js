@@ -101,3 +101,27 @@ $(".liquor-options").on("click", "li", function() {
 
 
 console.log(possibleRecipes);
+
+/* Changing Liquor Array when the User Inputs a file */
+
+function readSingleFile(e) {
+  var file = e.target.files[0];
+  if (!file) {
+    return;
+  }
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var contents = e.target.result;
+    displayContents(contents);
+  };
+  reader.readAsText(file);
+}
+
+function displayContents(contents) {
+  var element = document.getElementById('upload-button');
+  element.textContent = contents;
+  console.log(contents);
+}
+
+document.getElementById('upload-file')
+  .addEventListener('change', readSingleFile, false);
