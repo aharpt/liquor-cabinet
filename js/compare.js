@@ -54,7 +54,6 @@ $(".liquor-options").on("click", "li", function() {
   let $liquorClicked = $(this).text();
   let nonAlcoholIngredients = "";
   let alcoholIngredients = "";
-
   for (let i = 0; i < masterArr.length; i++) {
     if ($liquorClicked.toLowerCase() == masterArr[i][3]) {
 
@@ -153,23 +152,3 @@ function displayUploadedData() {
 
 document.getElementById('upload-file')
   .addEventListener('change', readFile, false);
-
-document.getElementById("download-file").onclick = function() {downloadManagement()};
-
-function downloadManagement() {
-  //used https://ourcodeworld.com/articles/read/189/how-to-create-a-file-and-generate-a-download-with-javascript-in-the-browser-without-a-server
-  //for instructions on downloading .txt from browser
-  let content = ""
-  for (let i = 0; i < temp_drinkArr.length; i++) {
-    content += temp_drinkArr[i];
-    content += "\n";
-  }
-  let filename = "yourcabinet.txt";
-  var element = document.createElement('a');
-  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(content));
-  element.setAttribute('download', filename);
-  element.style.display = 'none';
-  document.body.appendChild(element);
-  element.click();
-  document.body.removeChild(element);
-}

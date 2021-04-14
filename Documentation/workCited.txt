@@ -26,4 +26,5 @@ Stack Overflow:
   1. https://stackoverflow.com/questions/9484295/jquery-click-not-working-for-dynamically-created-items
   2. https://stackoverflow.com/questions/7972389/jquery-hover-not-working-for-dynamic-element/15393353
   3. https://stackoverflow.com/questions/12260529/break-statement-in-javascript-array-map-method
-Mozilla Developer Network - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMinutes
+Mozilla Developer Network - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMinutes'
+Downloading .txt -https://ourcodeworld.com/articles/read/189/how-to-create-a-file-and-generate-a-download-with-javascript-in-the-browser-without-a-server
