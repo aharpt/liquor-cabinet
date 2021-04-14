@@ -123,10 +123,10 @@ function displayContents(contents) {
   console.log(contents);
 
   let j = 0;
-  temp_drinkArr = [];
+  temp_drinkArr = ["", "", "", "", "", "", "", "", "", ""];
 
   for (let i = 0; i < contents.length; i++) {
-    if (contents[i] !== ",") {
+    if (contents[i] !== "," ) {
       temp_drinkArr[j] += contents[i];
     } else {
       j++;
@@ -138,7 +138,12 @@ function displayContents(contents) {
 function displayUploadedData() {
   document.querySelector(".liquor-options").innerHTML = "";
   for (let i = 0; i < temp_drinkArr.length; i++) {
-    document.querySelector(".liquor-options").innerHTML += '<li class="list-group-item">' + temp_drinkArr[i] + '</li>';
+    if (temp_drinkArr[i] === "") {
+      temp_drinkArr.remove(i);
+    } else {
+      console.log(temp_drinkArr[i]);
+      document.querySelector(".liquor-options").innerHTML += '<li class="list-group-item">' + temp_drinkArr[i] + '</li>';
+    }
   }
 }
 
