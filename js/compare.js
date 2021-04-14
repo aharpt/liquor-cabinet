@@ -104,6 +104,7 @@ console.log(possibleRecipes);
 
 /* Changing Liquor Array when the User Inputs a file */
 
+// reads data from uploaded file
 function readSingleFile(e) {
   var file = e.target.files[0];
   if (!file) {
@@ -112,17 +113,17 @@ function readSingleFile(e) {
   var reader = new FileReader();
   reader.onload = function(e) {
     var contents = e.target.result;
-    displayContents(contents);
+    addData(contents);
   };
   reader.readAsText(file);
 }
 
-function displayContents(contents) {
-  var element = document.getElementById('upload-button');
-  element.textContent = contents;
-  console.log(contents);
+// adds uploaded data to temp_drinkArr
+function addData(contents) {
 
+  // counter for temp_drinkArr
   let j = 0;
+  // reset temp_drinkArr to empty array of ten elements
   temp_drinkArr = ["", "", "", "", "", "", "", "", "", ""];
 
   for (let i = 0; i < contents.length; i++) {
@@ -132,9 +133,11 @@ function displayContents(contents) {
       j++;
     } // else
   } // for
+  
   displayUploadedData();
 }
 
+// displays data from uploaded file
 function displayUploadedData() {
   document.querySelector(".liquor-options").innerHTML = "";
   for (let i = 0; i < temp_drinkArr.length; i++) {
