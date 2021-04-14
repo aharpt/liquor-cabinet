@@ -105,7 +105,7 @@ console.log(possibleRecipes);
 /* Changing Liquor Array when the User Inputs a file */
 
 // reads data from uploaded file
-function readSingleFile(e) {
+function readFile(e) {
   var file = e.target.files[0];
   if (!file) {
     return;
@@ -133,7 +133,7 @@ function addData(contents) {
       j++;
     } // else
   } // for
-  
+
   displayUploadedData();
 }
 
@@ -151,4 +151,4 @@ function displayUploadedData() {
 }
 
 document.getElementById('upload-file')
-  .addEventListener('change', readSingleFile, false);
+  .addEventListener('change', readFile, false);
