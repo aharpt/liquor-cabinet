@@ -152,3 +152,19 @@ function displayUploadedData() {
 
 document.getElementById('upload-file')
   .addEventListener('change', readFile, false);
+
+document.getElementById("download-file").onclick = function() {downloadManagement()};
+
+function downloadManagement() {
+  //used https://ourcodeworld.com/articles/read/189/how-to-create-a-file-and-generate-a-download-with-javascript-in-the-browser-without-a-server
+  //for instructions on downloading .txt from browser
+  let content = ""
+  for (let i = 0; i < temp_drinkArr.length; i++) {
+    content += temp_drinkArr[i];
+    content += "\n";
+  }
+  let filename = "yourcabinet.txt";
+
+  let blob = new Blob([content], {type: "text/plain;charset=utf-8"});
+  saveAs(blob, filename);
+}
