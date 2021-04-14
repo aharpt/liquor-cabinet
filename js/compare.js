@@ -125,9 +125,9 @@ function addData(contents) {
   let j = 0;
   // reset temp_drinkArr to empty array of ten elements
   temp_drinkArr = ["", "", "", "", "", "", "", "", "", ""];
-
+  contents = contents.trim();
   for (let i = 0; i < contents.length; i++) {
-    if (contents[i] !== "," ) {
+    if (contents[i] !== ",") {
       temp_drinkArr[j] += contents[i];
     } else {
       j++;
