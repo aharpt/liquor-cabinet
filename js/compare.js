@@ -121,6 +121,25 @@ function displayContents(contents) {
   var element = document.getElementById('upload-button');
   element.textContent = contents;
   console.log(contents);
+
+  let j = 0;
+  temp_drinkArr = [];
+
+  for (let i = 0; i < contents.length; i++) {
+    if (contents[i] !== ",") {
+      temp_drinkArr[j] += contents[i];
+    } else {
+      j++;
+    } // else
+  } // for
+  displayUploadedData();
+}
+
+function displayUploadedData() {
+  document.querySelector(".liquor-options").innerHTML = "";
+  for (let i = 0; i < temp_drinkArr.length; i++) {
+    document.querySelector(".liquor-options").innerHTML += '<li class="list-group-item">' + temp_drinkArr[i] + '</li>';
+  }
 }
 
 document.getElementById('upload-file')
