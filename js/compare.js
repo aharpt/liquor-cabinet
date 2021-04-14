@@ -1,5 +1,6 @@
 //array format is ["Name", # of alcohols, # of non-alcohols, alcoholic ingredients, ... , nonalcoholic ingredients,]
 
+
 temp_drinkArr = ["Brandy", "Champagne", "Cognac", "Gin", "Red Wine", "Vermouth", "Vodka"];
 masterArr = [['Bloody Mary', 1, 7, 'vodka', 'tomatoe juice', 'lemon juice', 'Tabasco sauce', 'Worcestershire sauce', 'celery salt', 'pepper', 'horseradish', './img/Bloody-Mary.jpg'],
             ['Polynesian Pick-Me-Up', 1, 6, 'vodka', 'curry powder', 'lemon juice', 'cream', 'Tabasco sauce', 'crushed ice', './img/Polynesian-Pick-Me-Up.jpg'],
@@ -53,7 +54,6 @@ $(".liquor-options").on("click", "li", function() {
   let $liquorClicked = $(this).text();
   let nonAlcoholIngredients = "";
   let alcoholIngredients = "";
-
   for (let i = 0; i < masterArr.length; i++) {
     if ($liquorClicked.toLowerCase() == masterArr[i][3]) {
 

@@ -32,3 +32,23 @@ $("#clearButton").click(function() {
 $(".liquor-options").on("mouseenter", "li", function() {
   $(this).css("cursor", "pointer");
 });
+
+
+document.getElementById("download-file").onclick = function() {downloadManagement()};
+
+function downloadManagement() {
+  let content = ""
+  for (let i = 0; i < drinksChosen.length; i++) {
+    content += drinksChosen[i];
+    content += "\n";
+  }
+  let filename = "yourcabinet.txt";
+  var element = document.createElement('a');
+  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(content));
+  element.setAttribute('download', filename);
+  element.style.display = 'none';
+  document.body.appendChild(element);
+  element.click();
+  document.body.removeChild(element);
+}
+
