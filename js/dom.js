@@ -12,6 +12,7 @@ let drinksChosen = [];
 * Date Created: 3/23/21
 * Date Revised: 3/25/21, author: Aaron Harpt, description: Added append() call to append drink chosen to list of selected drinks
 * Date Revised: 4/17/21, author: Aaron Harpt, description: Removed Unneeded appending of .card element
+* Post Conditions: Liquor clicked is added to drinksChosen array, and element clicked is activated and added to drinks-selected
 */
 
 // click handlers on dynamic content https://stackoverflow.com/questions/9484295/jquery-click-not-working-for-dynamically-created-items
@@ -27,9 +28,8 @@ $(".liquor-options").on("click", "li", function() {
 /* Artifact Name: Callback function to be fired when the "Clear Selection" button is clicked
 * Description: When "Clear Selection" is clicked, empty the selected drinks list, and empty the drinksChosen array
 * Author: Aaron Harpt
-* Date Created: 3/23/21
-* Date Revised: 3/25/21, author: Aaron Harpt, description: Added append() call to append drink chosen to list of selected drinks
-* Date Revised: 4/17/21, author: Aaron Harpt, description: Removed Unneeded appending of .card element
+* Date Created: 3/29/21
+* Post Condtions: drinksChosen is equal to an empty array, drinks-selected is emptied, and all liquors and liquor recipes are unactivated
 */
 $("#clearButton").click(function() {
 
@@ -40,6 +40,14 @@ $("#clearButton").click(function() {
   // remove recipes
   $(".recipes-column .card").remove();
 });
+
+/* Artifact Name: Callback function to be fired when your cursor "mouses over" a liquor
+* Description: When a liquor is "moused over", the cursor changes to a pointer, indicating the element can be clicked on
+* Author: Aaron Harpt
+* Date Created: 3/23/21
+* Date Revised: 3/29/21 author: Aaron Harpt description: changed handler to being fired on "hover", event to "mouseover" event
+* Post Condtions: drinksChosen is equal to an empty array, drinks-selected is emptied, and all liquors and liquor recipes are unactivated
+*/
 
 // hover handler on dynamic content https://stackoverflow.com/questions/9484295/jquery-click-not-working-for-dynamically-created-items
 $(".liquor-options").on("mouseenter", "li", function() {
