@@ -43,7 +43,12 @@ function iterate(liquor, db) {
 
 compMaster(temp_drinkArr, masterArr);
 
-/* click handler for "Get Full Recipe" button */
+/* Artifact Name: Callback function to be fired when a "See Full Recipe" button is clicked
+* Description: When "See Full Recipe" button is clicked, hide button clicked, and show recipe ingredients
+* Author: Aaron Harpt
+* Date Created: 4/1/21
+* Post Conditions: Particular "See Full Recipe" button clicked is hidden, and recipe ingredients are shown
+*/
 $(".recipes-column").on("click", ".recipe-button", function() {
   $(this).hide();
   $(this).siblings("#ingredients").show();
