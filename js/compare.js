@@ -105,9 +105,6 @@ $(".liquor-options").on("click", "li", function() {
   }
 });
 
-
-
-
 console.log(possibleRecipes);
 
 /* Changing Liquor Array when the User Inputs a file */
