@@ -109,7 +109,12 @@ console.log(possibleRecipes);
 
 /* Changing Liquor Array when the User Inputs a file */
 
-// reads data from uploaded file
+/* Artifact Name: readFile
+* Description: Reads data from uploaded file
+* Author: Aaron Harpt
+* Date Created: 4/13/21
+* Post Conditions:
+*/
 function readFile(e) {
   var file = e.target.files[0];
   if (!file) {
@@ -123,7 +128,13 @@ function readFile(e) {
   reader.readAsText(file);
 }
 
-// adds uploaded data to temp_drinkArr
+
+/* Artifact Name: addData
+* Description: adds uploaded data to temp_drinkArr
+* Author: Aaron Harpt
+* Date Created: 4/13/21
+* Post Conditions: data is added to temp_drinkArr to be displayed to the browser
+*/
 function addData(contents) {
 
   // counter for temp_drinkArr
@@ -142,7 +153,12 @@ function addData(contents) {
   displayUploadedData();
 }
 
-// displays data from uploaded file
+/* Artifact Name: displayUploadedData
+* Description: displays data from uploaded file
+* Author: Aaron Harpt
+* Date Created: 4/13/21
+* Post Conditions: data from uploaded file is displayed to the browser
+*/
 function displayUploadedData() {
   document.querySelector(".liquor-options").innerHTML = "";
   for (let i = 0; i < temp_drinkArr.length; i++) {
@@ -155,5 +171,11 @@ function displayUploadedData() {
   }
 }
 
+/* Artifact Name: upload-file 'change' event listener
+* Description: calls readFile function when #upload-file element is changed
+* Author: Aaron Harpt
+* Date Created: 4/13/21
+* Post Conditions: readFile() function is called
+*/
 document.getElementById('upload-file')
   .addEventListener('change', readFile, false);
