@@ -1,5 +1,3 @@
-
-
 // drinksChosen holds all the drinks that the user selects
 let drinksChosen = [];
 
