@@ -54,7 +54,17 @@ $(".recipes-column").on("click", ".recipe-button", function() {
   $(this).siblings("#ingredients").show();
 });
 
-/* Function to search drink clicked and see what recipes should be displayed */
+/* Artifact Name: Callback function to be fired when a liquor is clicked
+* Description: When liquor is clicked, add suggested drinks.  Each suggested drinks needs an image, drink title, alhoholic, and probably nonalcoholic ingredients
+* Author: Aaron Harpt
+* Date Created: 3/29/21
+* Date Revised: 4/1/21 author: Aaron Harpt, description: Made all content dynamic other than the images
+* Date Revised: 4/2/21 author: Aaron Harpt, description: Made image content dynamic
+* Date Revised: 4/3/21 author: Aaron Harpt, description: Got content working with multiple alcohol bases
+* Date Revised: 4/10/21 author: Aaron Harpt, description: Changed from appending newly suggested drinks, to prepending them
+* Date Revised: 4/17/21 author: Aaron Harpt, description: Removed commented out code
+* Post Conditions: Particular "See Full Recipe" button clicked is hidden, and recipe ingredients are shown
+*/
 $(".liquor-options").on("click", "li", function() {
   let $liquorClicked = $(this).text();
   let nonAlcoholIngredients = "";
@@ -62,14 +72,7 @@ $(".liquor-options").on("click", "li", function() {
   for (let i = 0; i < masterArr.length; i++) {
     if ($liquorClicked.toLowerCase() == masterArr[i][3]) {
 
-  //     for (let j = 4; j < (masterArr[i].length - 1); j++) {
-  //       nonAlcoholIngredients += masterArr[i][j];
-  //       if (j !== (masterArr[i].length - 2)) {
-  //         nonAlcoholIngredients += ", ";
-  //       }
-  //     }
-
-      // SAME CONCEPT AS ABOVE JUST NEW IMPLEMENTATION
+      // getting alcoholic and nonalcoholic ingredients
       for (let j = 3; j < (masterArr[i].length - 1); j++) {
         for (let k = 0; k < temp_drinkArr.length; k++) {
           if (masterArr[i][j] == temp_drinkArr[k].toLowerCase()) {
