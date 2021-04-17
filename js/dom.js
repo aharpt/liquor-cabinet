@@ -1,9 +1,19 @@
+
+
 // drinksChosen holds all the drinks that the user selects
 let drinksChosen = [];
 
 // "$" is for JavaScript libary jQuery
 
-/* click handlers */
+
+/* Artifact Name: Callback function to be fired when a liquor is clicked
+* Description: When liquor is clicked, adds liquor to drinksChosen array and appends liquor to the list of selected drinks
+* Author: Aaron Harpt
+* Date Created: 3/23/21
+* Date Revised: 3/25/21, author: Aaron Harpt, description: Added append() call to append drink chosen to list of selected drinks
+* Date Revised: 4/17/21, author: Aaron Harpt, description: Removed Unneeded appending of .card element
+*/
+
 // click handlers on dynamic content https://stackoverflow.com/questions/9484295/jquery-click-not-working-for-dynamically-created-items
 $(".liquor-options").on("click", "li", function() {
   drinksChosen.push(this.innerText);
@@ -11,13 +21,16 @@ $(".liquor-options").on("click", "li", function() {
   $(this).addClass("disabled");
 
   $(".drinks-selected").append('<li class="list-group-item">' + this.innerHTML + '</li>');
-
-  // Add recipe options dynamically
-  // $(".recipes-column").append('<div class="card" style="width: 18rem;"><img src="./img/014_resized.jpg" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">Drink title</h5><p class="card-text">Drink Description.</p><a href="#" class="btn btn-primary card-link">See Full Recipe</a></div></div>');
-
 });
 
-/* Clear Handler */
+
+/* Artifact Name: Callback function to be fired when the "Clear Selection" button is clicked
+* Description: When "Clear Selection" is clicked, empty the selected drinks list, and empty the drinksChosen array
+* Author: Aaron Harpt
+* Date Created: 3/23/21
+* Date Revised: 3/25/21, author: Aaron Harpt, description: Added append() call to append drink chosen to list of selected drinks
+* Date Revised: 4/17/21, author: Aaron Harpt, description: Removed Unneeded appending of .card element
+*/
 $("#clearButton").click(function() {
 
   $(".drinks-selected li").remove();
@@ -51,4 +64,3 @@ function downloadManagement() {
   element.click();
   document.body.removeChild(element);
 }
-
