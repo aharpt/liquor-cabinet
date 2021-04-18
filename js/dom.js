@@ -12,6 +12,7 @@ document.getElementById("download-file").classList += " disabled";
 * Date Created: 3/23/21
 * Date Revised: 3/25/21, author: Aaron Harpt, description: Added append() call to append drink chosen to list of selected drinks
 * Date Revised: 4/17/21, author: Aaron Harpt, description: Removed Unneeded appending of .card element
+* Date Revised: 4/17/21, author: Aaron Harpt, description: Added code to enable 'Download' button when a list item is clicked
 * Post Conditions: Liquor clicked is added to drinksChosen array, and element clicked is activated and added to drinks-selected
 */
 
