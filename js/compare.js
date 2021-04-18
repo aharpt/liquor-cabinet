@@ -163,7 +163,6 @@ function addData(contents) {
 * Date Created: 4/13/21
 * Post Conditions: data from uploaded file is displayed to the browser
 */
-// displays data from uploaded file
 function displayUploadedData(selections) {
   //Parsing through the character list
 
@@ -198,7 +197,7 @@ function displayUploadedData(selections) {
       }
     }
   }
-  console.log("Finished uploading");  
+  console.log("Finished uploading");
 }
 
 /* Artifact Name: upload-file 'change' event listener
