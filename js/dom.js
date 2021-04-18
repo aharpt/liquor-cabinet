@@ -40,7 +40,7 @@ function downloadManagement() {
   let content = ""
   for (let i = 0; i < drinksChosen.length; i++) {
     content += drinksChosen[i];
-    content += "\n";
+    content += ", ";
   }
   let filename = "yourcabinet.txt";
   var element = document.createElement('a');
