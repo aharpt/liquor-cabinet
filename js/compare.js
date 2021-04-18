@@ -120,10 +120,16 @@ function readFile(e) {
   if (!file) {
     return;
   }
+  if (!(file.name.split(".").pop().toLowerCase() == 'txt')) {
+    console.log(file.name.split(".").pop().toLowerCase())
+    alert("Invalid file type, please try again.");
+    return;
+  }
   var reader = new FileReader();
   reader.onload = function(e) {
     var contents = e.target.result;
-    addData(contents);
+    //addData(contents);
+    displayUploadedData(contents);
   };
   reader.readAsText(file);
 }
@@ -149,8 +155,6 @@ function addData(contents) {
       j++;
     } // else
   } // for
-
-  displayUploadedData();
 }
 
 /* Artifact Name: displayUploadedData
@@ -159,16 +163,42 @@ function addData(contents) {
 * Date Created: 4/13/21
 * Post Conditions: data from uploaded file is displayed to the browser
 */
-function displayUploadedData() {
-  document.querySelector(".liquor-options").innerHTML = "";
-  for (let i = 0; i < temp_drinkArr.length; i++) {
-    if (temp_drinkArr[i] === "") {
-      temp_drinkArr.remove(i);
-    } else {
-      console.log(temp_drinkArr[i]);
-      document.querySelector(".liquor-options").innerHTML += '<li class="list-group-item">' + temp_drinkArr[i] + '</li>';
+// displays data from uploaded file
+function displayUploadedData(selections) {
+  //Parsing through the character list
+
+  let holder = "";
+  let loadedChoices = [];
+  for (let i = 0; i < selections.length; i++) {
+    if(selections[i] != ",") {
+      holder += selections[i];
+    }
+    else {
+      holder = holder.trim();
+      loadedChoices.push(holder);
+      holder = "";
     }
   }
+  //console.log(loadedChoices)
+
+  //reloading the options
+  let list = document.querySelector(".liquor-options");
+  list.innerHTML = "";
+  for (let i = 0; i < temp_drinkArr.length; i++) {
+    list.innerHTML += '<li class="list-group-item">' + temp_drinkArr[i] + '</li>';
+  }
+  //preclicking elements
+  let arr = list.getElementsByTagName("li")
+  for (let i = 0; i < loadedChoices.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      console.log("Testing ", loadedChoices[i]);
+      if (loadedChoices[i] == arr[j].innerText) {
+        arr[j].click();
+        console.log("Clicking ", arr[j].innerText);
+      }
+    }
+  }
+  console.log("Finished uploading");  
 }
 
 /* Artifact Name: upload-file 'change' event listener
