@@ -40,3 +40,7 @@
 .download-file {
   margin-bottom: 25px;
 }
+
+.disabled {
+  cursor: not-allowed;
+}
