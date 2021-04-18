@@ -43,13 +43,28 @@ function iterate(liquor, db) {
 
 compMaster(temp_drinkArr, masterArr);
 
-/* click handler for "Get Full Recipe" button */
+/* Artifact Name: Callback function to be fired when a "See Full Recipe" button is clicked
+* Description: When "See Full Recipe" button is clicked, hide button clicked, and show recipe ingredients
+* Author: Aaron Harpt
+* Date Created: 4/1/21
+* Post Conditions: Particular "See Full Recipe" button clicked is hidden, and recipe ingredients are shown
+*/
 $(".recipes-column").on("click", ".recipe-button", function() {
   $(this).hide();
   $(this).siblings("#ingredients").show();
 });
 
-/* Function to search drink clicked and see what recipes should be displayed */
+/* Artifact Name: Callback function to be fired when a liquor is clicked
+* Description: When liquor is clicked, add suggested drinks.  Each suggested drinks needs an image, drink title, alhoholic, and probably nonalcoholic ingredients
+* Author: Aaron Harpt
+* Date Created: 3/29/21
+* Date Revised: 4/1/21 author: Aaron Harpt, description: Made all content dynamic other than the images
+* Date Revised: 4/2/21 author: Aaron Harpt, description: Made image content dynamic
+* Date Revised: 4/3/21 author: Aaron Harpt, description: Got content working with multiple alcohol bases
+* Date Revised: 4/10/21 author: Aaron Harpt, description: Changed from appending newly suggested drinks, to prepending them
+* Date Revised: 4/17/21 author: Aaron Harpt, description: Removed commented out code
+* Post Conditions: Particular "See Full Recipe" button clicked is hidden, and recipe ingredients are shown
+*/
 $(".liquor-options").on("click", "li", function() {
   let $liquorClicked = $(this).text();
   let nonAlcoholIngredients = "";
@@ -57,14 +72,7 @@ $(".liquor-options").on("click", "li", function() {
   for (let i = 0; i < masterArr.length; i++) {
     if ($liquorClicked.toLowerCase() == masterArr[i][3]) {
 
-  //     for (let j = 4; j < (masterArr[i].length - 1); j++) {
-  //       nonAlcoholIngredients += masterArr[i][j];
-  //       if (j !== (masterArr[i].length - 2)) {
-  //         nonAlcoholIngredients += ", ";
-  //       }
-  //     }
-
-      // SAME CONCEPT AS ABOVE JUST NEW IMPLEMENTATION
+      // getting alcoholic and nonalcoholic ingredients
       for (let j = 3; j < (masterArr[i].length - 1); j++) {
         for (let k = 0; k < temp_drinkArr.length; k++) {
           if (masterArr[i][j] == temp_drinkArr[k].toLowerCase()) {
@@ -97,14 +105,16 @@ $(".liquor-options").on("click", "li", function() {
   }
 });
 
-
-
-
 console.log(possibleRecipes);
 
-/* Changing Liquor Array when the User Inputs a file */
+// Changing Liquor Array when the User Inputs a file
 
-// reads data from uploaded file
+/* Artifact Name: readFile
+* Description: Reads data from uploaded file
+* Author: Aaron Harpt
+* Date Created: 4/13/21
+* Post Conditions:
+*/
 function readFile(e) {
   var file = e.target.files[0];
   if (!file) {
@@ -124,16 +134,22 @@ function readFile(e) {
   reader.readAsText(file);
 }
 
-// adds uploaded data to temp_drinkArr
+
+/* Artifact Name: addData
+* Description: adds uploaded data to temp_drinkArr
+* Author: Aaron Harpt
+* Date Created: 4/13/21
+* Post Conditions: data is added to temp_drinkArr to be displayed to the browser
+*/
 function addData(contents) {
 
   // counter for temp_drinkArr
   let j = 0;
   // reset temp_drinkArr to empty array of ten elements
   temp_drinkArr = ["", "", "", "", "", "", "", "", "", ""];
-
+  contents = contents.trim();
   for (let i = 0; i < contents.length; i++) {
-    if (contents[i] !== "," ) {
+    if (contents[i] !== ",") {
       temp_drinkArr[j] += contents[i];
     } else {
       j++;
@@ -141,6 +157,12 @@ function addData(contents) {
   } // for
 }
 
+/* Artifact Name: displayUploadedData
+* Description: displays data from uploaded file
+* Author: Aaron Harpt
+* Date Created: 4/13/21
+* Post Conditions: data from uploaded file is displayed to the browser
+*/
 // displays data from uploaded file
 function displayUploadedData(selections) {
   //Parsing through the character list
@@ -179,5 +201,11 @@ function displayUploadedData(selections) {
   console.log("Finished uploading");  
 }
 
+/* Artifact Name: upload-file 'change' event listener
+* Description: calls readFile function when #upload-file element is changed
+* Author: Aaron Harpt
+* Date Created: 4/13/21
+* Post Conditions: readFile() function is called
+*/
 document.getElementById('upload-file')
   .addEventListener('change', readFile, false);
