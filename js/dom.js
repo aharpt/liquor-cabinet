@@ -1,5 +1,6 @@
 // drinksChosen holds all the drinks that the user selects
 let drinksChosen = [];
+document.getElementById("download-file").setAttribute("disabled", true);
 
 // "$" is for JavaScript libary jQuery
 
@@ -15,6 +16,7 @@ let drinksChosen = [];
 
 // click handlers on dynamic content https://stackoverflow.com/questions/9484295/jquery-click-not-working-for-dynamically-created-items
 $(".liquor-options").on("click", "li", function() {
+  document.getElementById("download-file").disabled = false;
   drinksChosen.push(this.innerText);
   $(this).addClass("active");
   $(this).addClass("disabled");
