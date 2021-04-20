@@ -1,3 +1,23 @@
+Bloody Marry:
+https://www.jamieoliver.com/recipes/vodka-recipes/bloody-mary/
+Polynesian Pick-Me-Up:
+https://www.mixology.recipes/cocktails/polynesian-pick-me-up
+Sangria:
+https://www.simplywhisked.com/simple-red-sangria/
+Screwdriver:
+https://www.myrecipes.com/recipe/simple-screwdriver
+Sea Breeze: https://www.bakingbeauty.net/wp-content/uploads/2018/12/sea-breeze-cocktail-2-700x1050.jpg
+Cape Cod: https://www.masslive.com/bestofmass/2015/02/the_cape_codder_massachusetts.html
+Mimosa:
+https://www.recipetineats.com/how-to-make-mimosas/
+Country Club Cooler:
+https://www.epicurus.com/beverages/country-club-cooler/2555/
+Madras:
+https://www.becomebetty.com/madras-cocktail/
+Champagne Blues:
+https://www.diffordsguide.com/cocktails/recipe/257/blue-champagne
+
+Programming-Related:
 https://refactoring.guru/design-patterns/catalog
 https://javascript.plainenglish.io/what-are-javascript-programming-paradigms-3ef0f576dfdb
 Bootstrap Framework v 4.6 - https://getbootstrap.com/docs/4.6/getting-started/introduction/
@@ -6,4 +26,5 @@ Stack Overflow:
   1. https://stackoverflow.com/questions/9484295/jquery-click-not-working-for-dynamically-created-items
   2. https://stackoverflow.com/questions/7972389/jquery-hover-not-working-for-dynamic-element/15393353
   3. https://stackoverflow.com/questions/12260529/break-statement-in-javascript-array-map-method
-Mozilla Developer Network - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMinutes
+Mozilla Developer Network - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/getMinutes'
+Downloading .txt -https://ourcodeworld.com/articles/read/189/how-to-create-a-file-and-generate-a-download-with-javascript-in-the-browser-without-a-server
