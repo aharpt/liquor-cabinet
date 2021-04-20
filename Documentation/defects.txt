@@ -1,0 +1,9 @@
+Upload adds extra to drinks selected:
+Found on 4/17 by Nick
+After multiple drinks are selected, repeats can happen after uploading a new file as shown on the interface
+--unfixed
+
+Clock displays 12:... as 0:...
+Found on 4/17 by Nick
+Modulus issue, 12 is 0 mod 12
+--unfixed
