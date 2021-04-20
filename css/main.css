@@ -44,3 +44,8 @@
 .disabled {
   cursor: not-allowed;
 }
+
+/* Tests Div */
+.tests-div {
+  margin-top: 15px;
+}
