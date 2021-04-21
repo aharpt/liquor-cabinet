@@ -1,7 +1,7 @@
 // drinksChosen holds all the drinks that the user selects
 let drinksChosen = [];
-// document.getElementById("download-file").setAttribute("disabled", true);
-// document.getElementById("download-file").classList += " disabled";
+document.getElementById("download-file").setAttribute("disabled", true);
+document.getElementById("download-file").classList += " disabled";
 
 // "$" is for JavaScript libary jQuery
 
