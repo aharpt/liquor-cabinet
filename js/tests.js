@@ -17,5 +17,9 @@ document.querySelector(".tests").addEventListener("click", function() {
     console.log("Recipe Button Shows Full Recipe when clicked : Failed");
   }
 
-  setTimeout(triggerClear, 5000);
+  // end of "See Full Recipe" test
+
+  // setTimeout to trigger clear after successive tests
+  setTimeout(triggerClear, 1000);
+
 });
