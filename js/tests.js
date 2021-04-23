@@ -70,4 +70,3 @@ document.querySelector(".tests").addEventListener("click", function() {
   // setTimeout to trigger clear after successive tests
   setTimeout(triggerClear, 1000);
 });
-
