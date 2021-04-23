@@ -24,7 +24,7 @@ function compMaster(list, file) {
 
 
 function iterate(liquor, db) {
-    console.log("Reading ", liquor);
+    // console.log("Reading ", liquor);
     // appends drinks for temp_drinkArr
     $(".liquor-options").append('<li class="list-group-item">' + liquor + '</li>');
     for (var i = 0; i < db.length; i++) {
@@ -96,7 +96,7 @@ $(".liquor-options").on("click", "li", function() {
         }
       }
 
-      console.log("In conditional");
+      // console.log("In conditional");
       $(".possibleDrinks").prepend('<div class="card" style="width: 18rem;"><img src="'+ masterArr[i][(masterArr[i].length - 1)] + '" class="card-img-top" alt="..."><div class="card-body"><h5 class="card-title">' + masterArr[i][0] + '</h5><p class="card-text">' + masterArr[i][0] + '.</p><button class="btn btn-primary recipe-button">See Full Recipe</button><ul id="ingredients"><span>Ingredients:</span><ol>Parts Alcohol: ' + masterArr[i][1] + '</ol><ol>Parts Non-Alcohol: ' + masterArr[i][2] + '</ol><ol>Alcohol Ingredients: ' + alcoholIngredients + '</ol><ol>Non-Alcohol Ingredients: ' + nonAlcoholIngredients+ '</ol></ul></div></div>');
 
       nonAlcoholIngredients = "";
@@ -105,7 +105,7 @@ $(".liquor-options").on("click", "li", function() {
   }
 });
 
-console.log(possibleRecipes);
+// console.log(possibleRecipes);
 
 // Changing Liquor Array when the User Inputs a file
 

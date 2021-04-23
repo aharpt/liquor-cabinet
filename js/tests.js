@@ -2,6 +2,8 @@
 
 let triggerClear = () => {
   $("#clearButton").trigger("click");
+  document.getElementById("download-file").setAttribute("disabled", true);
+  document.getElementById("download-file").classList += " disabled";
 };
 
 let triggerOneDrink = () => {
