@@ -1,3 +1,5 @@
+Design Paradigms:
+
 Team 14 chose to do a function-oriented design programming paradigm for the design of our 
 prototype for project 3. For project 3 our team decided to create a program that will 
 suggest certain drink based on the liquor you have or want to use. We decided to break 

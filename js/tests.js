@@ -6,9 +6,26 @@ let triggerClear = () => {
   document.getElementById("download-file").classList += " disabled";
 };
 
+let triggerOneDrink = () => {
+  $(".liquor-options li").trigger("click");
+  var x = document.getElementsByClassName("list-group-item active disabled");
+  var i;
+  for (i = 0; i < x.length; i++) {
+    console.log(x[i].innerHTML )
+} 
+  console.log("aloha");
+}
+
 document.querySelector(".tests").addEventListener("click", function() {
   // Testing "See Full Recipe" button
   $(".liquor-options li").trigger("click");
+  var x = document.getElementsByClassName("list-group liquor-options");
+  var i;
+  for (i = 0; i < x.length; i++) {
+    console.log(i);
+    console.log(x[i]);
+  } 
+  console.log("aloha");
 
   // simulating click to first "See Full Recipe" button
   $(document.querySelector(".recipe-button")).trigger("click");
@@ -25,3 +42,4 @@ document.querySelector(".tests").addEventListener("click", function() {
   setTimeout(triggerClear, 1000);
 
 });
+
