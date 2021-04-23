@@ -12,7 +12,7 @@ let triggerOneDrink = () => {
   var i;
   for (i = 0; i < x.length; i++) {
     console.log(x[i].innerHTML )
-} 
+}
   console.log("aloha");
 }
 
@@ -24,7 +24,7 @@ document.querySelector(".tests").addEventListener("click", function() {
   for (i = 0; i < x.length; i++) {
     console.log(i);
     console.log(x[i]);
-  } 
+  }
   console.log("aloha");
 
   // simulating click to first "See Full Recipe" button
@@ -42,4 +42,3 @@ document.querySelector(".tests").addEventListener("click", function() {
   setTimeout(triggerClear, 1000);
 
 });
-
