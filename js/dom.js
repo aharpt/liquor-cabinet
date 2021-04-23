@@ -57,9 +57,16 @@ $(".liquor-options").on("mouseenter", "li", function() {
   $(this).css("cursor", "pointer");
 });
 
-
+//checking for download button click
 document.getElementById("download-file").onclick = function() {downloadManagement()};
 
+/* Artifact Name: downloadManagement
+* Description: downloads a formatted .txt of saved recipe choices
+* Author: Nick Velicer
+* Date Created: 4/13/21
+* Date Revised: 4/16/21 author: Nick Velicer description: adjusted .txt formatting
+* Post Conditions: a .txt of recipe choices is downloaded to the user's downloads for reupload later on
+*/
 function downloadManagement() {
   let content = ""
   for (let i = 0; i < drinksChosen.length; i++) {

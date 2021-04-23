@@ -16,6 +16,12 @@ masterArr = [['Bloody Mary', 1, 7, 'vodka', 'tomatoe juice', 'lemon juice', 'Tab
 
 possibleRecipes = [];
 
+/* Artifact Name: compMaster
+* Description: runs iterable comparisons on the master drinks
+* Author: Nick Velicer
+* Date Created: 3/23/21
+* Post Conditions: iterate() is repeatedly called on the choosable drink items
+*/
 function compMaster(list, file) {
     for (var i = 0; i < list.length; i++) {
         iterate(list[i], file)
@@ -23,6 +29,12 @@ function compMaster(list, file) {
 }
 
 
+/* Artifact Name: iterate
+* Description: compares drinks against the master array
+* Author: Nick Velicer
+* Date Created: 3/23/21
+* Post Conditions: individual drink name string is checked against each name string in the master drink array
+*/
 function iterate(liquor, db) {
     // console.log("Reading ", liquor);
     // appends drinks for temp_drinkArr
@@ -161,6 +173,7 @@ function addData(contents) {
 * Description: displays data from uploaded file
 * Author: Aaron Harpt
 * Date Created: 4/13/21
+* Date Revised: 4/16/21 author: Nick Velicer description: properly calibrated recipe selections from upload
 * Post Conditions: data from uploaded file is displayed to the browser
 */
 function displayUploadedData(selections) {

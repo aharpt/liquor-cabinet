@@ -1,4 +1,11 @@
 
+/* Artifact Name: dateChange
+* Description: displays the system time and a drink recommendation
+* Author: Nick Velicer
+* Date Created: 3/27/21
+* Date Revised: 4/16/21 author: Nick Velicer description: added recursive functionality
+* Post Conditions: time is displayed and updated with according drink recommendations depending on the hour.
+*/
 function dateChange() {
     let d = new Date();
 
