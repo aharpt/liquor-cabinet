@@ -60,21 +60,6 @@ document.querySelector(".tests").addEventListener("click", function() {
   console.log("Test 3: Single alcohol selected displays drink options for that alcohol " + (triggerOneDrink() ? "PASSED" : "FAILED") + "\n");
   console.log("Test 4: Recipe Button Shows Full Recipe when clicked " + (seeFullRecipe() ? "PASSED" : "FAILED")+"\n");
   console.log("Test 5: Clear selection clears selected liquors and drinks selected " + (checkClearButton() ? "PASSED" : "FAILED")+"\n");
-  // Testing "See Full Recipe" button
 
-  //$(".liquor-options li").trigger("click");
-
-  /*// simulating click to first "See Full Recipe" button
-  $(document.querySelector(".recipe-button")).trigger("click");
-
-  if (document.querySelector(".recipe-button").style.display == "none") {
-    console.log("Recipe Button Shows Full Recipe when clicked : Passed");
-  } else {
-    console.log("Recipe Button Shows Full Recipe when clicked : Failed");
-  }
-
-  // end of "See Full Recipe" test*/
-
-  // setTimeout to trigger clear after successive tests
   setTimeout(triggerClear, 1000);
 });
