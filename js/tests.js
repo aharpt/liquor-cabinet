@@ -52,6 +52,7 @@ let checkClearButton = () => {
 
 // when "Run Tests" button is clicked
 document.querySelector(".tests").addEventListener("click", function() {
+  alert("Please check the console for test suite results.");
   console.log( "\n\n=========================\n");
   console.log("   RUNNING TEST SUITE    \n");
   console.log("=========================\n\n");
