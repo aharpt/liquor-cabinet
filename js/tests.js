@@ -1,4 +1,4 @@
-// when "Run Tests" button is clicked
+
 
 let triggerClear = () => {
   $("#clearButton").trigger("click");
@@ -7,27 +7,56 @@ let triggerClear = () => {
 };
 
 let triggerOneDrink = () => {
-  $(".liquor-options li").trigger("click");
-  var x = document.getElementsByClassName("list-group-item active disabled");
-  var i;
-  for (i = 0; i < x.length; i++) {
-    console.log(x[i].innerHTML )
-}
   console.log("aloha");
-}
+};
 
-document.querySelector(".tests").addEventListener("click", function() {
-  // Testing "See Full Recipe" button
+let noAlcoholsSelected = () => {
+  let list = document.querySelector(".liquor-options");
+  let arr = list.getElementsByClassName("active disabled");
+  let list2 = document.querySelector(".drinks-selected");
+  let arr2 = list2.getElementsByTagName("Li");
+  return(arr.length==arr2.length);
+};
+
+let allAlcoholsSelected = () => {
   $(".liquor-options li").trigger("click");
-  var x = document.getElementsByClassName("list-group liquor-options");
-  var i;
-  for (i = 0; i < x.length; i++) {
-    console.log(i);
-    console.log(x[i]);
-  }
-  console.log("aloha");
+  let list = document.querySelector(".liquor-options");
+  let arr = list.getElementsByClassName("active disabled");
+  let list2 = document.querySelector(".drinks-selected");
+  let arr2 = list2.getElementsByTagName("Li");
+  return(arr.length==arr2.length);
+};
 
+let seeFullRecipe = () => {
   // simulating click to first "See Full Recipe" button
+  $(document.querySelector(".recipe-button")).trigger("click");
+  return(document.querySelector(".recipe-button").style.display == "none");
+  // end of "See Full Recipe" test
+};
+
+let checkClearButton = () => {
+  triggerClear();
+  let list = document.querySelector(".liquor-options");
+  let arr = list.getElementsByClassName("active disabled");
+  let list2 = document.querySelector(".drinks-selected");
+  let arr2 = list2.getElementsByTagName("Li");
+  return(arr.length == 0 && arr2.length == 0);
+}
+
+// when "Run Tests" button is clicked
+document.querySelector(".tests").addEventListener("click", function() {
+  console.log( "\n\n=========================\n");
+  console.log("   RUNNING TEST SUITE    \n");
+  console.log("=========================\n\n");
+  console.log("Test 1: No alcohols selected displays no drink options " + (noAlcoholsSelected() ? "PASSED" : "FAILED")+"\n");
+  console.log("Test 2: All alcohols selected displays all drink options " + (allAlcoholsSelected() ? "PASSED" : "FAILED")+"\n");
+  console.log("Test 3: Recipe Button Shows Full Recipe when clicked " + (seeFullRecipe() ? "PASSED" : "FAILED")+"\n");
+  console.log("Test 4: Clear selection clears selected liquors and drinks selected " + (checkClearButton() ? "PASSED" : "FAILED")+"\n");
+  // Testing "See Full Recipe" button
+
+  //$(".liquor-options li").trigger("click");
+
+  /*// simulating click to first "See Full Recipe" button
   $(document.querySelector(".recipe-button")).trigger("click");
 
   if (document.querySelector(".recipe-button").style.display == "none") {
@@ -36,9 +65,8 @@ document.querySelector(".tests").addEventListener("click", function() {
     console.log("Recipe Button Shows Full Recipe when clicked : Failed");
   }
 
-  // end of "See Full Recipe" test
+  // end of "See Full Recipe" test*/
 
   // setTimeout to trigger clear after successive tests
   setTimeout(triggerClear, 1000);
-
 });
