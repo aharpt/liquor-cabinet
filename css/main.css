@@ -1,3 +1,8 @@
+/* heading styles */
+.jumbotron {
+  padding-bottom: 30px;
+}
+
 /* Styles for cards displaying suggested drinks */
 
 .card {
@@ -48,4 +53,10 @@
 /* Tests Div */
 .tests-div {
   margin-top: 15px;
+}
+
+/* drink responsibly paragraph */
+.drink-responsibly {
+  font-weight: bold;
+  margin-top: 10px;
 }
