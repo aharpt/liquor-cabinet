@@ -17,12 +17,21 @@ Actual Hours:
 	4/23: 120 min
     Kaylee:
     Nick:
+    	4/13: 90 min.
+	4/14: 30 min.
+	4/15: 45 min.
+	4/16: 80 min.
+	4/17: 25 min.
+	4/18: 15 min.
+	4/21: 45 min.
+	4/23: 110 min.
+	4/24: 10 min.
     Michael:
 	4/15 - 20 min
 	4/19 - 120 min
 	4/20 - 10 min
 	4/23 - 10 min
-	4/25 - 20 min
+	4/25 - 25 min
     Aaron:
 	4/10 - 10 min
 	4/17 - 50 min
