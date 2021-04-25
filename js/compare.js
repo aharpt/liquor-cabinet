@@ -1,21 +1,39 @@
 //array format is ["Name", # of alcohols, # of non-alcohols, alcoholic ingredients, ... , nonalcoholic ingredients,]
 
 
-temp_drinkArr = ["Brandy", "Champagne", "Cognac", "Gin", "Red Wine", "Vermouth", "Vodka"];
+temp_drinkArr = ["Bourbon", "Brandy", "Campari", "Champagne", "Cognac", "Gin", "Kahlua", "Red Wine", "Rum", "Triple Sec", "Vermouth", "Vodka", "Whiskey"];
 masterArr = [['Bloody Mary', 1, 7, 'vodka', 'tomatoe juice', 'lemon juice', 'Tabasco sauce', 'Worcestershire sauce', 'celery salt', 'pepper', 'horseradish', './img/Bloody-Mary.jpg'],
             ['Polynesian Pick-Me-Up', 1, 6, 'vodka', 'curry powder', 'lemon juice', 'cream', 'Tabasco sauce', 'crushed ice', './img/Polynesian-Pick-Me-Up.jpg'],
-            ['Sangria', 2, 7, 'red wine', 'cognac', 'triple sec', 'maraschino liquor', 'ripe peach', 'lemon slices', 'sugar', 'orange', 'club soda', './img/Sangira.jpg'],
-            ['Screwdriver', 1, 3, 'vodka', 'triple sec', 'orange juice', 'lemon juice', './img/Screwdriver.jpg'],
+            ['Sangria', 3, 7, 'red wine', 'cognac', 'Triple Sec', 'maraschino liquor', 'ripe peach', 'lemon slices', 'sugar', 'orange', 'club soda', './img/Sangira.jpg'],
+            ['Screwdriver', 2, 3, 'vodka', 'Triple Sec', 'orange juice', 'lemon juice', './img/Screwdriver.jpg'],
             ['Sea Breeze', 2, 4, 'gin', 'brandy', 'grenadine', 'lemon juice', 'club soda', 'mint sprigs', './img/Sea-Breeze.jpg'],
             ['Cape Cod', 1, 3, 'vodka', 'lime juice', 'cranberry juice', 'sugar', './img/Cape-Cod.jpg'],
             ['Mimosa', 1, 2, 'champagne', 'orange juice', 'apricot nectar', './img/Mimosa.jpg'],
             ['Country Club Cooler', 1, 3, 'vermouth', 'club soda', 'ginger ale', 'grenadine', './img/Country-Club-Cooler.jpg'],
             ['Madras', 1, 2, 'vodka', 'cranberry juice', 'orange juice', './img/Madras.jpg'],
-            ['Champagne Blues', 1, 3, 'champagne', 'blue curacao', 'lemon juice', 'lemons', './img/Champagne-lues.jpg']];
+            ['Champagne Blues', 1, 3, 'champagne', 'blue curacao', 'lemon juice', 'lemons', './img/Champagne-lues.jpg'],
+            ["Ambassador's Morning Lift", 2, 2, 'cognac', 'rum', 'eggnog', 'Creme de Cacao', './img/AML.jpg'],
+            ["Gravel Gertie", 1, 3, "vodka", "tomato juice", "clam juice", "Tabasco sauce", "./img/Gravel-Gertie.png"],
+            ["Greyhound", 1, 1, "vodka", "grapefruit juice", "./img/Greyhound.jpg"],
+            ["Tom Collins", 1, 3, "gin", "sugar", "lemon juice", "club soda", "./img/Tom-Collins.jpg"],
+            ["Mint Julep", 1, 3, "bourbon", "mint leaves", "sugar", "water", "./img/Mint-Julep.jpg"],
+            ["White Russian", 2, 1, "vodka", "Kahlua", "cream", "./img/White-Russian.jpg"],
+            ["Gin and Tonic", 1, 1, "gin", "tonic water", "./img/Gin-and-Tonic.jpg"],
+            ["Negroni", 3, 0, "gin", "Campari", "vermouth", "./img/Negroni.jpg"],
+            ["Rum Collins", 1, 3, "rum", "simple syrup", "lime juice", "club soda", "./img/Rum-Collins.jpg"],
+            ["Moscow Mule", 1, 2, "vodka", "lime juice", "ginger beer", "./img/Moscow-Mule.jpg"],
+            ["Mojito", 1, 4, "rum", "simple syrup", "mint leaves", "club soda", "lime juice", "./img/Mojito.jpg"],
+            ["Irish Coffee", 1, 1, "whiskey", "coffee", "./img/Irish-Coffee.jpg"]];
 
 
 possibleRecipes = [];
 
+/* Artifact Name: compMaster
+* Description: runs iterable comparisons on the master drinks
+* Author: Nick Velicer
+* Date Created: 3/23/21
+* Post Conditions: iterate() is repeatedly called on the choosable drink items
+*/
 function compMaster(list, file) {
     for (var i = 0; i < list.length; i++) {
         iterate(list[i], file)
@@ -23,6 +41,12 @@ function compMaster(list, file) {
 }
 
 
+/* Artifact Name: iterate
+* Description: compares drinks against the master array
+* Author: Nick Velicer
+* Date Created: 3/23/21
+* Post Conditions: individual drink name string is checked against each name string in the master drink array
+*/
 function iterate(liquor, db) {
     // console.log("Reading ", liquor);
     // appends drinks for temp_drinkArr
@@ -161,6 +185,7 @@ function addData(contents) {
 * Description: displays data from uploaded file
 * Author: Aaron Harpt
 * Date Created: 4/13/21
+* Date Revised: 4/16/21 author: Nick Velicer description: properly calibrated recipe selections from upload
 * Post Conditions: data from uploaded file is displayed to the browser
 */
 function displayUploadedData(selections) {

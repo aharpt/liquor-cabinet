@@ -1,0 +1,23 @@
+Integration Strategy:
+
+We went about integrating code with incremental jumps in functionality as a goal. This is somewhat 
+in keeping with the Agile methodology (albeit without an official client giving us feedback, that 
+mostly came from within the group), and allowed for us to have a much stronger framework going into 
+project four. Initially, we created a diagram of the major areas or nodes of the project which would 
+encapsulate lower levels of functionality. Although we did not know it at the time, this was the beginnings 
+of our later top-down integration strategy. After splitting up responsibilities between each member, the 
+code base started with rudimentary shells of components with only the bare minimum of interaction. This was 
+done to check for any major design flaws or structural weaknesses before moving on with the project. 
+
+After getting a prototype fleshed out for project three, we were able to capitalize on our initial strategy 
+by essentially filling in the gaps we had left for ourselves and had planned ahead for. This allowed us to 
+easily add planned features such as upload/download functionality and more detailed recipes. By the end of 
+the actual development, we had clearly followed the principles behind top-down integration in the steps we 
+took. This is shown by our strong initial design with later lower-level improvements and functionality being 
+added after testing. Additionally, we dealt with one of the struggles of top-down design when contemplating new 
+features (such as adding an ABV feature to the drink’s data), which led to some good ideas being unfortunately 
+not feasible since they would require essentially a ground-up reorganization to implement. Overall, despite 
+some understandable shortcomings, we were successful with the top-down integration strategy and were able to 
+use it to good effect across projects three and four.
+
+Words: 294
