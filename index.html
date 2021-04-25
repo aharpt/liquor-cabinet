@@ -11,7 +11,11 @@
       <div class="container">
         <h2>Welcome to Your Liquor Cabinet.</h2>
         <h3 id="time">Display Current Time</h3>
-        <p1 id="recommendation">Perhaps a ...?</p1>
+        <p1 id="recommendation">Perhaps a ...?</p1><br>
+        <div class="tests-div">
+            <button class="btn btn-outline-primary tests" type="button" name="button">Run Tests</button>
+        </div>
+        <p class="drink-responsibly">***Please drink responsibly and follow all applicable state and/or federal guidelines.***</p>
       </div>
     </div>
 
@@ -22,6 +26,15 @@
           <ul class="list-group liquor-options">
           </ul>
           <button id="clearButton" type="button" class="btn btn-secondary">Clear Selection</button>
+          <div class="upload-file">
+            <p class="">Upload Recipe File:</p>
+            <input id="upload-file" type="file" name="" value="" />
+          </div>
+
+          <div class="download-file">
+            <p class="">Download Selections:</p>
+            <button class="btn btn-secondary" type="button" name="button" id="download-file">Download</button>
+          </div>
         </div>
 
         <div class="col-md-7 recipes-column">
@@ -29,16 +42,19 @@
           <ul class="list-group drinks-selected">
           </ul>
           <h3>Drinks You Could Make:</h3>
+          <div class="possibleDrinks">
+
           </div>
+        </div>
         </div>
       </div>
     </div>
-
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="./js/recommendDrink.js"></script>
     <script type="text/javascript" src="./js/dom.js">
     </script>
     <script src="./js/compare.js"></script>
+    <script src="./js/tests.js"></script>
   </body>
 </html>

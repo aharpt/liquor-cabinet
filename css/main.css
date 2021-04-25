@@ -1,3 +1,8 @@
+/* heading styles */
+.jumbotron {
+  padding-bottom: 30px;
+}
+
 /* Styles for cards displaying suggested drinks */
 
 .card {
@@ -27,4 +32,31 @@
 /* Ingredients Paragraph */
 #ingredients {
   display: none;
+}
+
+/* Upload file div */
+.upload-file {
+  display: block;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+/* Download file div */
+.download-file {
+  margin-bottom: 25px;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+/* Tests Div */
+.tests-div {
+  margin-top: 15px;
+}
+
+/* drink responsibly paragraph */
+.drink-responsibly {
+  font-weight: bold;
+  margin-top: 10px;
 }

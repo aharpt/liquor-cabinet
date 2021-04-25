@@ -36,3 +36,15 @@ Team Meeting Hours:
     4/17 - 40 min
     4/21 - 50 min
     4/23 - 20 min
+    3/22:   40 min
+        Start:  7:00pm
+        End:    7:40pm
+    3/27:   30 min
+        Start:  1:00pm
+        End:    1:30pm
+    3/31:   30 min
+        Start:  1:00pm
+        End:    1:30pm
+    4/3:    15 min
+        Start:  12:00pm
+        End:    12:15pm
