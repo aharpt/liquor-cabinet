@@ -2,46 +2,37 @@ Expected Hours:
 expected hours are calculated based on team members previous experience and how long it would take them to do a 
 project/tast of similar magnitude. This can include hours writing physical code along with the hour needed to 
 learn the project language.
-    Eva: 6hrs
+    Eva: 4-6hrs
     Kaylee:
-    Nick: 4-5 hrs
-    Michael: 5-8 hrs
-    Aaron: 10 hrs
+    Nick: 3-4 hrs
+    Michael: 5-8hrs
+    Aaron: 10hrs
 
 
 Actual Hours:
     Eva:
-        3/27:  30 min
-        3/30:  20 min
-        4/2:   90 min
-        4/3:   105 min
+	4/20: 65 min
+	4/21: 90 min
+	4/22: 20 min
+	4/23: 120 min
     Kaylee:
     Nick:
-        3/23 - 40 min.
-        3/24 - 30 min.
-        3/28 - 60 min.
-        4/1  - 60 min.
-    Michael:     
-	    3/26 - 90 min
-	    3/31 - 60 min
-	    4/1  - 30 min
-        4/2  - 15 min
+    Michael:
+	4/15 - 20 min
+	4/19 - 120 min
+	4/20 - 10 min
+	4/23 - 10 min
+	4/25 - 20 min
     Aaron:
-        3/23:  30 min
-        3/26:  70 min
-        3/27:  20 min  meeting with Michael
-        3/28:  27 min
-        4/1:   18 min
-        4/2:   13 min
-        4/3:   35 min
+	4/10 - 10 min
+	4/17 - 50 min
+	4/20 - 30 min
+	4/21 - 20 min
+	4/23 - 20 min
 
 Team Meeting Hours:
-    3/22:   40 min
-        Start:  7:00pm
-        End:    7:40pm
-    3/27:   30 min
-        Start:  1:00pm
-        End:    1:30pm
-    3/31:   30 min
-        Start:  1:00pm
-        End:    1:30pm
+    4/10 - 20 min
+    4/14 - 20 min
+    4/17 - 40 min
+    4/21 - 50 min
+    4/23 - 20 min
