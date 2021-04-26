@@ -3,7 +3,7 @@ expected hours are calculated based on team members previous experience and how 
 project/tast of similar magnitude. This can include hours writing physical code along with the hour needed to 
 learn the project language.
     Eva: 4-6hrs
-    Kaylee:
+    Kaylee: 5 hrs
     Nick: 3-4 hrs
     Michael: 5-8hrs
     Aaron: 10hrs
@@ -16,6 +16,8 @@ Actual Hours:
 	4/22: 20 min
 	4/23: 120 min
     Kaylee:
+    	4/13: 60 min
+	4/25: 240 min
     Nick:
     	4/13: 90 min.
 	4/14: 30 min.
